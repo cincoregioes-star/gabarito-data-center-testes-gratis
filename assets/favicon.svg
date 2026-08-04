@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Gabarito Data Center">
+  <defs>
+    <linearGradient id="bg" x1="4" y1="4" x2="60" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#12d9ff"/>
+      <stop offset="1" stop-color="#85ff4f"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#07121f"/>
+  <rect x="12" y="10" width="40" height="44" rx="8" fill="none" stroke="url(#bg)" stroke-width="4"/>
+  <path d="M20 21h12M20 31h7M20 41h9" stroke="#dffaff" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="43" cy="21" r="2.5" fill="#85ff4f"/>
+  <path d="m34 40 5 5 10-13" fill="none" stroke="#ffc84a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

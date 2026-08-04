@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 210" role="img" aria-labelledby="title desc">
+  <title id="title">Gabarito Data Center</title>
+  <desc id="desc">Um servidor de dados com um sinal de conferência ao lado do nome Gabarito Data Center.</desc>
+  <defs>
+    <linearGradient id="logoGradient" x1="18" y1="17" x2="173" y2="188" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#13dbff"/>
+      <stop offset="0.55" stop-color="#65f3bd"/>
+      <stop offset="1" stop-color="#9eff4f"/>
+    </linearGradient>
+    <linearGradient id="checkGradient" x1="100" y1="104" x2="168" y2="164" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffe07a"/>
+      <stop offset="1" stop-color="#ffad32"/>
+    </linearGradient>
+    <filter id="logoGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g transform="translate(12 12)">
+    <rect x="10" y="5" width="166" height="176" rx="34" fill="#071b2d" stroke="url(#logoGradient)" stroke-width="5"/>
+    <rect x="29" y="27" width="128" height="35" rx="11" fill="#0b263a" stroke="#1c6c7c" stroke-width="2"/>
+    <rect x="29" y="73" width="128" height="35" rx="11" fill="#0b263a" stroke="#1c6c7c" stroke-width="2"/>
+    <rect x="29" y="119" width="128" height="35" rx="11" fill="#0b263a" stroke="#1c6c7c" stroke-width="2"/>
+    <path d="M47 44h47M47 90h34M47 136h39" stroke="#d9fbff" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="137" cy="44" r="5" fill="#9eff4f" filter="url(#logoGlow)"/>
+    <circle cx="137" cy="90" r="5" fill="#13dbff" filter="url(#logoGlow)"/>
+    <path d="m99 135 15 15 39-51" fill="none" stroke="url(#checkGradient)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" filter="url(#logoGlow)"/>
+  </g>
+  <g font-family="Inter, Manrope, Arial, sans-serif">
+    <text x="220" y="94" fill="#effcff" font-size="70" font-weight="800" letter-spacing="2">GABARITO</text>
+    <text x="222" y="159" fill="url(#logoGradient)" font-size="61" font-weight="800" letter-spacing="10">DATA CENTER</text>
+    <path d="M224 178h621" stroke="#19425a" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="858" cy="178" r="5" fill="#ffc84a"/>
+  </g>
+</svg>
