@@ -221,6 +221,17 @@ summary:focus-visible {
   box-shadow: 0 17px 48px rgba(19, 219, 255, 0.3);
 }
 
+.button--premium {
+  background: linear-gradient(135deg, #ffd35a, #ff9f1c 58%, #ff5c35);
+  box-shadow: 0 14px 38px rgba(255, 159, 28, 0.2);
+  color: #211100;
+}
+
+.button--premium:hover,
+.button--premium:focus-visible {
+  box-shadow: 0 17px 48px rgba(255, 159, 28, 0.34);
+}
+
 .button--outline {
   border-color: rgba(155, 220, 234, 0.27);
   color: #d8eef3;
@@ -976,6 +987,13 @@ summary:focus-visible {
 
 .track-free-link {
   margin-top: 13px;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.track-premium-link {
+  margin-top: 15px;
   position: relative;
   width: 100%;
   z-index: 1;
