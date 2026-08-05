@@ -2,73 +2,73 @@ const tracks = [
   {
     code: "OPS", title: "Operação e Monitoramento", category: "Operações", level: "Técnico • Entrada e atualização", accent: "cyan", price: "29,90",
     description: "Rotinas 24x7, alarmes, rondas, registros, escalonamento e resposta inicial a incidentes.",
-    freeUrl: "simulados/operacao-monitoramento/", premiumUrl: "https://pay.kiwify.com.br/xy013Ic",
+    freeUrl: "simulados/operacao-monitoramento/index.html", premiumUrl: "https://pay.kiwify.com.br/xy013Ic",
     modules: ["Fundamentos de data center", "Operação em missão crítica", "Alarmes e escalonamento", "Rondas e procedimentos", "Incidentes e comunicação", "Segurança e continuidade"]
   },
   {
     code: "NOC", title: "NOC e Monitoramento de Infraestrutura", category: "Tecnologia", level: "Técnico/Superior • TI", accent: "violet", price: "29,90",
     description: "Disponibilidade, eventos, métricas, tickets, SLAs e diagnóstico de falhas em ambientes críticos.",
-    freeUrl: "simulados/noc-monitoramento/", premiumUrl: "https://pay.kiwify.com.br/KBO2Dig",
+    freeUrl: "simulados/noc-monitoramento/index.html", premiumUrl: "https://pay.kiwify.com.br/KBO2Dig",
     modules: ["Fundamentos de NOC", "Monitoramento e observabilidade", "Redes e protocolos", "Gestão de incidentes", "SLA, KPI e relatórios", "Cenários de troubleshooting"]
   },
   {
     code: "PWR", title: "Facilities Elétricas", category: "Infraestrutura", level: "Técnico/Superior • Elétrica", accent: "amber", price: "39,90",
     description: "UPS, geradores, quadros, distribuição, redundância, proteção e práticas seguras de intervenção.",
-    freeUrl: "simulados/facilities-eletricas/", premiumUrl: "https://pay.kiwify.com.br/9d9MtZo",
+    freeUrl: "simulados/facilities-eletricas/index.html", premiumUrl: "https://pay.kiwify.com.br/9d9MtZo",
     modules: ["Eletricidade aplicada", "UPS e bancos de baterias", "Geradores e transferência", "Quadros e distribuição", "Redundância e seletividade", "Medições e qualidade de energia", "NR-10 e segurança", "Falhas e contingência"]
   },
   {
     code: "HVAC", title: "Refrigeração e HVAC", category: "Infraestrutura", level: "Técnico/Superior • Mecânica", accent: "cyan", price: "39,90",
     description: "Climatização de precisão, fluxo de ar, chillers, CRAC/CRAH, eficiência e resposta térmica.",
-    freeUrl: "simulados/refrigeracao-hvac/", premiumUrl: "https://pay.kiwify.com.br/UFDnAPN",
+    freeUrl: "simulados/refrigeracao-hvac/index.html", premiumUrl: "https://pay.kiwify.com.br/UFDnAPN",
     modules: ["Termodinâmica aplicada", "Climatização de precisão", "CRAC, CRAH e chillers", "Fluxo de ar e corredores", "Umidade e qualidade ambiental", "Eficiência e PUE", "Alarmes e contingência térmica"]
   },
   {
     code: "BMS", title: "Automação, BMS e DCIM", category: "Tecnologia", level: "Técnico/Superior • Automação", accent: "lime", price: "39,90",
     description: "Sensores, supervisórios, lógicas de controle, integração de sistemas e gestão de capacidade.",
-    freeUrl: "simulados/automacao-bms-dcim/", premiumUrl: "https://pay.kiwify.com.br/AcoiCiX",
+    freeUrl: "simulados/automacao-bms-dcim/index.html", premiumUrl: "https://pay.kiwify.com.br/AcoiCiX",
     modules: ["Instrumentação e sensores", "CLP e lógica de controle", "BMS e supervisórios", "DCIM e capacidade", "Protocolos de automação", "Alarmes e tendências", "Diagnóstico integrado"]
   },
   {
     code: "NET", title: "Redes, Fibra e Conectividade", category: "Tecnologia", level: "Técnico/Superior • Redes", accent: "violet", price: "39,90",
     description: "Cabeamento estruturado, fibra óptica, switching, redundância, testes e organização física.",
-    freeUrl: "simulados/redes-fibra-conectividade/", premiumUrl: "https://pay.kiwify.com.br/Nkyl2pO",
+    freeUrl: "simulados/redes-fibra-conectividade/index.html", premiumUrl: "https://pay.kiwify.com.br/Nkyl2pO",
     modules: ["Fundamentos de redes", "Cabeamento estruturado", "Fibra óptica e testes", "Switching e VLANs", "Roteamento e redundância", "Racks, patching e organização", "Troubleshooting de conectividade"]
   },
   {
     code: "MNT", title: "Manutenção e Confiabilidade", category: "Operações", level: "Técnico/Superior • O&M", accent: "lime", price: "29,90",
     description: "Planos preventivos, ordens de serviço, análise de falhas, indicadores e gestão de mudanças.",
-    freeUrl: "simulados/manutencao-confiabilidade/", premiumUrl: "https://pay.kiwify.com.br/A4ceknE",
+    freeUrl: "simulados/manutencao-confiabilidade/index.html", premiumUrl: "https://pay.kiwify.com.br/A4ceknE",
     modules: ["Estratégias de manutenção", "Planejamento e ordens de serviço", "Análise de causa raiz", "Confiabilidade e disponibilidade", "MOP, SOP e EOP", "Mudanças e lições aprendidas"]
   },
   {
     code: "EHS", title: "Segurança, EHS e Qualidade", category: "Suporte", level: "Técnico/Superior • Compliance", accent: "amber", price: "19,90",
     description: "Riscos, permissões de trabalho, emergências, auditorias, controles e cultura de segurança.",
-    freeUrl: "simulados/seguranca-ehs-qualidade/", premiumUrl: "https://pay.kiwify.com.br/zhustgq",
+    freeUrl: "simulados/seguranca-ehs-qualidade/index.html", premiumUrl: "https://pay.kiwify.com.br/zhustgq",
     modules: ["Riscos e controles críticos", "Permissão e trabalho seguro", "Emergências e evacuação", "Qualidade e auditorias", "Incidentes e conformidade"]
   },
   {
     code: "LOG", title: "Logística e Almoxarifado Técnico", category: "Suporte", level: "Médio/Técnico • Operacional", accent: "cyan", price: "19,90",
     description: "Recebimento, inventário, peças críticas, rastreabilidade, movimentação e suporte às equipes.",
-    freeUrl: "simulados/logistica-almoxarifado/", premiumUrl: "https://pay.kiwify.com.br/yBQxkYM",
+    freeUrl: "simulados/logistica-almoxarifado/index.html", premiumUrl: "https://pay.kiwify.com.br/yBQxkYM",
     modules: ["Rotinas de almoxarifado", "Inventário e rastreabilidade", "Peças e materiais críticos", "Recebimento e movimentação", "Segurança e documentação"]
   },
   {
     code: "PMO", title: "Planejamento, Compras e Administrativo", category: "Suporte", level: "Médio/Superior • Administrativo", accent: "violet", price: "19,90",
     description: "Cronogramas, contratos, compras técnicas, documentação, custos e apoio à operação e às obras.",
-    freeUrl: "simulados/planejamento-compras-administrativo/", premiumUrl: "https://pay.kiwify.com.br/mELa54y",
+    freeUrl: "simulados/planejamento-compras-administrativo/index.html", premiumUrl: "https://pay.kiwify.com.br/mELa54y",
     modules: ["Rotinas administrativas", "Planejamento e cronogramas", "Compras e contratos", "Custos e controles", "Documentação técnica"]
   },
   {
     code: "CXM", title: "Engenharia, Obras e Comissionamento", category: "Infraestrutura", level: "Superior • Engenharia", accent: "amber", price: "49,90",
     description: "Projetos, implantação, testes integrados, entrega técnica, documentação e gestão de riscos.",
-    freeUrl: "simulados/engenharia-obras-comissionamento/", premiumUrl: "https://pay.kiwify.com.br/QNAgRe8",
+    freeUrl: "simulados/engenharia-obras-comissionamento/index.html", premiumUrl: "https://pay.kiwify.com.br/QNAgRe8",
     modules: ["Arquitetura de data centers", "Projetos elétricos", "Projetos mecânicos", "Automação e integração", "Planejamento de obras", "Qualidade e inspeções", "Comissionamento por níveis", "Testes integrados", "Documentação e handover", "Riscos e cenários críticos"]
   },
   {
     code: "LDR", title: "Liderança e Gestão de Operações", category: "Operações", level: "Superior • Coordenação/Gestão", accent: "lime", price: "49,90",
     description: "Pessoas, turnos, indicadores, clientes, capacidade, mudanças e decisões sob pressão.",
-    freeUrl: "simulados/lideranca-gestao-operacoes/", premiumUrl: "https://pay.kiwify.com.br/9entGbh",
+    freeUrl: "simulados/lideranca-gestao-operacoes/index.html", premiumUrl: "https://pay.kiwify.com.br/9entGbh",
     modules: ["Gestão de operações críticas", "Liderança de equipes", "Turnos e cobertura operacional", "SLA, KPI e desempenho", "Clientes e comunicação executiva", "Capacidade e continuidade", "Mudanças e riscos", "Decisões em incidentes"]
   }
 ];

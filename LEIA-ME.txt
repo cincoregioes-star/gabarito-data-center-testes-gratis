@@ -1,0 +1,9 @@
+GABARITO DATA CENTER — SITE COM 12 TESTES GRATUITOS
+
+1. Extraia todo o conteúdo do arquivo ZIP.
+2. Mantenha index.html, script.js, style.css e as pastas assets e simulados juntos.
+3. Abra o index.html localizado na pasta principal.
+4. Não abra o site diretamente de dentro do ZIP: primeiro use “Extrair tudo”.
+
+Os 12 botões “Iniciar teste grátis” abrem diretamente o index.html de cada simulado.
+Os materiais premium não estão neste pacote e permanecem exclusivamente na Kiwify.

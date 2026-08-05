@@ -126,13 +126,19 @@ main {
 }
 
 .brand-mark {
+  aspect-ratio: 3 / 1;
+  border: 1px solid rgba(19, 219, 255, 0.24);
+  border-radius: 16px;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.3);
   display: block;
   height: auto;
   max-width: 100%;
+  object-fit: cover;
   width: 690px;
 }
 
 .brand-mark--compact {
+  border-radius: 10px;
   width: 182px;
 }
 
