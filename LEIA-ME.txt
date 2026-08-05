@@ -24,7 +24,8 @@ ATUALIZAÇÕES DESTA VERSÃO
 
 META PIXEL
 
-O ID numérico deve ser informado na constante META_PIXEL_ID do arquivo meta-pixel.js.
-Sem um ID válido, o Pixel e o painel de cookies permanecem inativos.
+Meta Pixel instalado no site principal e nos 12 testes gratuitos.
+ID configurado: 1584530586731768.
+O carregamento ocorre somente depois da autorização no painel de cookies.
 Na Kiwify, o mesmo Pixel deve ser adicionado separadamente aos 12 produtos em:
 Produtos > selecionar produto > Configurações > Pixels de conversão.
