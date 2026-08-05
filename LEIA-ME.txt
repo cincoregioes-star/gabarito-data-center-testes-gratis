@@ -1,9 +1,30 @@
-GABARITO DATA CENTER — SITE COM 12 TESTES GRATUITOS
+GABARITO DATA CENTER — SITE COM 12 TESTES GRATUITOS E 12 CHECKOUTS
 
 1. Extraia todo o conteúdo do arquivo ZIP.
-2. Mantenha index.html, script.js, style.css e as pastas assets e simulados juntos.
+2. Mantenha index.html, privacidade.html, script.js, meta-pixel.js, style.css e as pastas assets e simulados juntos.
 3. Abra o index.html localizado na pasta principal.
 4. Não abra o site diretamente de dentro do ZIP: primeiro use “Extrair tudo”.
 
 Os 12 botões “Iniciar teste grátis” abrem diretamente o index.html de cada simulado.
+Os 12 botões premium abrem os respectivos checkouts da Kiwify com identificação de origem por UTM.
 Os materiais premium não estão neste pacote e permanecem exclusivamente na Kiwify.
+
+ATUALIZAÇÕES DESTA VERSÃO
+
+- Três textos de pré-lançamento atualizados para checkouts disponíveis.
+- Imagem de compartilhamento para WhatsApp, Facebook, LinkedIn e outras redes.
+- Metadados Open Graph, Twitter Card, URL canônica e descrição social.
+- Página de privacidade e painel de consentimento de cookies.
+- Código do Meta Pixel preparado para carregar somente após autorização.
+- Eventos ViewContent nos botões premium e FreeTestStart nos testes gratuitos.
+- Parâmetros src e UTM adicionados aos 12 links da Kiwify.
+- Botão “Voltar ao site” incluído no topo dos 12 testes gratuitos.
+- Botões premium internos corrigidos para o checkout específico de cada produto.
+- Referências visíveis ao GitHub retiradas dos cards e das perguntas frequentes.
+
+META PIXEL
+
+O ID numérico deve ser informado na constante META_PIXEL_ID do arquivo meta-pixel.js.
+Sem um ID válido, o Pixel e o painel de cookies permanecem inativos.
+Na Kiwify, o mesmo Pixel deve ser adicionado separadamente aos 12 produtos em:
+Produtos > selecionar produto > Configurações > Pixels de conversão.

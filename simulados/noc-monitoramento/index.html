@@ -23,10 +23,11 @@
     button,input{font:inherit}button{cursor:pointer}a{color:var(--cyan2)}
     .shell{position:relative;z-index:1;width:min(1100px,calc(100% - 32px));margin:auto}
     .topbar{padding:20px 0 8px}
-    .topbar__inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .topbar__inner{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
     .brand{display:flex;align-items:center;gap:12px;color:var(--white);text-decoration:none}
     .logo{width:55px;height:55px;display:grid;place-items:center;border:1px solid var(--line);border-radius:16px;background:linear-gradient(145deg,rgba(24,214,255,.22),rgba(185,255,57,.08));box-shadow:0 0 35px rgba(24,214,255,.15)}
     .logo svg{width:39px;height:39px}.brand strong{display:block;letter-spacing:.07em}.brand small{display:block;color:var(--lime);font-size:.68rem;letter-spacing:.2em;margin-top:3px}
+    .topbar__actions{display:flex;align-items:center;gap:10px}.back-site{display:inline-flex;align-items:center;justify-content:center;padding:10px 13px;border:1px solid rgba(24,214,255,.28);border-radius:999px;background:rgba(24,214,255,.08);color:var(--cyan2);font-size:.78rem;font-weight:850;text-decoration:none;white-space:nowrap;transition:.18s}.back-site:hover,.back-site:focus-visible{background:rgba(24,214,255,.16);border-color:rgba(24,214,255,.55);transform:translateY(-1px)}
     .sound{display:flex;align-items:center;gap:9px;padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(3,11,20,.6)}
     .sound button{display:flex;align-items:center;gap:7px;color:var(--white);background:none;border:0;padding:5px}
     .dot{width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 12px var(--green)}
@@ -56,19 +57,23 @@
     .sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
     @media(max-width:780px){.hero{grid-template-columns:1fr}.hero__side{min-height:240px}.module-grid{grid-template-columns:1fr}.premium-banner{align-items:flex-start;flex-direction:column}}
     @media(max-width:580px){.shell{width:min(100% - 22px,1100px)}.logo{width:47px;height:47px}.brand strong{font-size:.9rem}.brand small{font-size:.59rem}.sound input,.sound-label{display:none}.hero,.panel{border-radius:18px}.hero__copy{padding:28px 22px}.quiz-head{align-items:flex-start}.timer{padding:8px 10px}.quiz-actions{align-items:stretch;flex-direction:column-reverse}.quiz-actions .btn{width:100%}.result-stats,.partners{grid-template-columns:1fr}.footer-inner{display:block}.footer-inner div:last-child{text-align:left;margin-top:12px}.option{grid-template-columns:34px 1fr;padding:13px}.letter{width:32px;height:32px}}
+    @media(max-width:580px){.topbar__actions{width:100%;justify-content:space-between}.back-site{font-size:.72rem;padding:8px 10px}}
     @media print{body{background:#fff;color:#111}.topbar,#homeView,#quizView,footer,.result-actions,.partners{display:none!important}.result{box-shadow:none;background:#fff;border:1px solid #bbb}.score-ring::before{background:#fff}.result h1,.score-ring b{color:#111}.review-item{background:#fff;color:#111}.review-item p{color:#333}}
   </style>
 </head>
 <body>
   <header class="topbar">
     <div class="shell topbar__inner">
-      <a class="brand" id="brandHome" href="#" aria-label="Voltar ao início">
+      <a class="brand" id="brandHome" href="#" aria-label="Voltar à apresentação deste teste">
         <span class="logo" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><rect x="7" y="5" width="34" height="38" rx="7" stroke="#18d6ff" stroke-width="2"/><path d="M13 14h22M13 23h22M13 32h22" stroke="#86eaff" stroke-width="2"/><circle cx="16" cy="14" r="2" fill="#b9ff39"/><circle cx="16" cy="23" r="2" fill="#b9ff39"/><circle cx="16" cy="32" r="2" fill="#ffbd2e"/><path d="M29 11v6m0 3v6m0 3v6" stroke="#18d6ff" stroke-width="2" stroke-linecap="round"/></svg></span>
         <span><strong>GABARITO DATA CENTER</strong><small>TESTE GRÁTIS</small></span>
       </a>
-      <div class="sound" aria-label="Controles de áudio">
-        <button id="soundToggle" type="button" aria-pressed="true"><span class="dot"></span><span class="sound-label">Som ligado</span></button>
-        <label class="sr-only" for="volume">Volume</label><input id="volume" type="range" min="0" max="1" value="0.35" step="0.05">
+      <div class="topbar__actions">
+        <a class="back-site" href="../../index.html" aria-label="Voltar à tela inicial do Gabarito Data Center">← Voltar ao site</a>
+        <div class="sound" aria-label="Controles de áudio">
+          <button id="soundToggle" type="button" aria-pressed="true"><span class="dot"></span><span class="sound-label">Som ligado</span></button>
+          <label class="sr-only" for="volume">Volume</label><input id="volume" type="range" min="0" max="1" value="0.35" step="0.05">
+        </div>
       </div>
     </div>
   </header>
@@ -108,8 +113,8 @@
   <script>
     "use strict";
 
-    // Troque apenas esta URL pelo checkout da Kiwify quando o produto for publicado.
-    const PREMIUM_URL = "https://gabarito-data-center.profcarlostavares.chatgpt.site/#premium";
+    // Checkout oficial deste produto na Kiwify, com identificação da origem do clique.
+    const PREMIUM_URL = "https://pay.kiwify.com.br/KBO2Dig?src=teste-gratis&utm_source=gabarito-data-center&utm_medium=teste-gratis&utm_campaign=catalogo-premium-2026&utm_content=noc-monitoramento";
     const STORAGE_KEY = "gdc-teste-gratis-noc-monitoramento-v1";
     const LETTERS = ["A","B","C","D"];
     const MODULES = [
@@ -269,7 +274,7 @@
     function renderReview(){const list=el("reviewList");list.textContent="";const misses=state.answers.filter(item=>!item.correct);el("review").hidden=misses.length===0;if(!misses.length)return;misses.forEach((item,index)=>{const card=document.createElement("article");card.className="review-item";const title=document.createElement("strong");title.textContent=`${index+1}. ${item.question.q}`;const chosen=document.createElement("p");chosen.className="chosen";chosen.textContent=item.timedOut?"Sua resposta: tempo esgotado":`Sua resposta: ${item.question.o[item.selected]}`;const right=document.createElement("p");right.className="right";right.textContent=`Correta: ${item.question.o[item.question.a]}`;const explanation=document.createElement("p");explanation.textContent=item.question.e;card.append(title,chosen,right,explanation);list.appendChild(card)})}
     function exitQuiz(){if(state.answers.length&&state.answers.length<state.session.length&&!confirm("Sair agora? Esta tentativa não será salva."))return;clearInterval(state.timer);stopBackground();renderHome()}
 
-    el("premiumHome").href=PREMIUM_URL;el("premiumResult").href=PREMIUM_URL;el("soundToggle").addEventListener("click",toggleSound);el("volume").addEventListener("input",event=>{state.volume=Number(event.target.value);setVolumes()});el("brandHome").addEventListener("click",event=>{event.preventDefault();if(!views.quiz.hidden)exitQuiz();else renderHome()});el("exitQuiz").addEventListener("click",exitQuiz);el("nextQuestion").addEventListener("click",next);el("returnHome").addEventListener("click",renderHome);el("retry").addEventListener("click",()=>startModule(state.module.id));el("printResult").addEventListener("click",()=>window.print());
+    el("premiumHome").href=PREMIUM_URL;el("premiumResult").href=PREMIUM_URL;["premiumHome","premiumResult"].forEach(id=>{el(id).target="_blank";el(id).rel="noreferrer"});el("soundToggle").addEventListener("click",toggleSound);el("volume").addEventListener("input",event=>{state.volume=Number(event.target.value);setVolumes()});el("brandHome").addEventListener("click",event=>{event.preventDefault();if(!views.quiz.hidden)exitQuiz();else renderHome()});el("exitQuiz").addEventListener("click",exitQuiz);el("nextQuestion").addEventListener("click",next);el("returnHome").addEventListener("click",renderHome);el("retry").addEventListener("click",()=>startModule(state.module.id));el("printResult").addEventListener("click",()=>window.print());
     setVolumes();renderHome();
   </script>
 </body>

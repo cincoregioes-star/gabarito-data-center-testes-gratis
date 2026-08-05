@@ -85,6 +85,21 @@ function normalize(value) {
   return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 }
 
+function checkoutUrl(track) {
+  const url = new URL(track.premiumUrl);
+  url.searchParams.set("src", "site-gabarito-data-center");
+  url.searchParams.set("utm_source", "gabarito-data-center");
+  url.searchParams.set("utm_medium", "site");
+  url.searchParams.set("utm_campaign", "catalogo-premium-2026");
+  url.searchParams.set("utm_content", track.code.toLowerCase());
+  return url.toString();
+}
+
+function sendMetaEvent(method, eventName, parameters) {
+  if (typeof window.fbq !== "function") return;
+  window.fbq(method, eventName, parameters);
+}
+
 function renderFilters() {
   filters.innerHTML = categories.map((category) => `
     <button class="filter-button${state.category === category ? " is-active" : ""}" type="button" data-category="${category}" aria-pressed="${state.category === category}">${category}</button>
@@ -103,7 +118,7 @@ function cardTemplate(track) {
   const total = track.modules.length * 20;
   const moduleItems = track.modules.map((module) => `<li><span>${module}</span><strong>20 q.</strong></li>`).join("");
   const freeButton = track.freeUrl
-    ? `<a class="button button--primary track-free-link" href="${track.freeUrl}">Iniciar teste grátis <span aria-hidden="true">→</span></a>`
+    ? `<a class="button button--primary track-free-link" href="${track.freeUrl}" data-track-code="${track.code}" data-track-title="${track.title}">Iniciar teste grátis <span aria-hidden="true">→</span></a>`
     : "";
   return `
     <article class="track-card track-card--${track.accent}">
@@ -115,7 +130,7 @@ function cardTemplate(track) {
       ${freeButton}
       <details class="module-details"><summary>Ver estrutura premium <span aria-hidden="true">＋</span></summary><ol>${moduleItems}</ol></details>
       <div class="track-card__footer"><div><small>Premium completo</small><strong>R$ ${track.price}</strong></div><div class="question-count"><strong>${total}</strong><span>questões</span></div></div>
-      <a class="button button--premium track-premium-link" href="${track.premiumUrl}" target="_blank" rel="noreferrer" aria-label="Comprar ${track.title} Premium na Kiwify">Comprar Premium na Kiwify <span aria-hidden="true">↗</span></a>
+      <a class="button button--premium track-premium-link" href="${checkoutUrl(track)}" target="_blank" rel="noreferrer" data-track-code="${track.code}" data-track-title="${track.title}" data-track-category="${track.category}" data-track-price="${track.price.replace(",", ".")}" aria-label="Comprar ${track.title} Premium na Kiwify">Comprar Premium na Kiwify <span aria-hidden="true">↗</span></a>
     </article>
   `;
 }
@@ -137,6 +152,29 @@ function renderTracks() {
 search.addEventListener("input", (event) => {
   state.query = event.target.value;
   renderTracks();
+});
+
+grid.addEventListener("click", (event) => {
+  const freeLink = event.target.closest(".track-free-link");
+  if (freeLink) {
+    sendMetaEvent("trackCustom", "FreeTestStart", {
+      content_id: freeLink.dataset.trackCode,
+      content_name: freeLink.dataset.trackTitle
+    });
+    return;
+  }
+
+  const premiumLink = event.target.closest(".track-premium-link");
+  if (premiumLink) {
+    sendMetaEvent("track", "ViewContent", {
+      content_ids: [premiumLink.dataset.trackCode],
+      content_name: premiumLink.dataset.trackTitle,
+      content_category: premiumLink.dataset.trackCategory,
+      content_type: "product",
+      currency: "BRL",
+      value: Number(premiumLink.dataset.trackPrice)
+    });
+  }
 });
 
 document.querySelector("#clear-filters").addEventListener("click", () => {
